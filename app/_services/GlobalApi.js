@@ -94,7 +94,7 @@ const getBusinessById=async(id)=>{
 }
 
 
-const createNewBooking=async(businessId,date,time,userEmail,userName)=>{
+const createNewBooking=async(businessId,date,time,userEmail,userName,address,phonenumber)=>{
   const mutationQuery=gql`
   mutation CreateBooking {
     createBooking(
@@ -102,7 +102,10 @@ const createNewBooking=async(businessId,date,time,userEmail,userName)=>{
         businessList: {connect: {id: "`+businessId+`"}},
          date: "`+date+`", time: "`+time+`", 
          userEmail: "`+userEmail+`",
-          userName: "`+userName+`"}
+          userName: "`+userName+`",
+          address: "`+address+`",
+          phonenumber: "`+phonenumber+`"
+          }
     ) {
       id
     }
