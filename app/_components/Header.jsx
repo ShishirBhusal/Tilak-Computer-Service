@@ -20,7 +20,7 @@ function Header() {
       {/* Logo Section */}
       <div className='flex items-center gap-8'>
         <Link href='/' className='flex items-center'>
-          <Image src='/logo.svg' alt='logo' width={180} height={100} />
+          <Image src='/image.png' alt='logo' width={180} height={100} />
         </Link>
       </div>
 
